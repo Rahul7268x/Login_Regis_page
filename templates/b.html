@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Register Here</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-primary text-dark bg-opacity-25">
+
+ <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Instructions!</strong> New registration form fill correctly
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <h2>Checkout form</h2>
+            <p class="lead">New registration may be done online, and already registerd candidate may login with their registration number and password,
+                Each required form group has a validation state that can be triggered by attempting to submit the form without completing
+                it.</p>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Register Here</h4>
+                <form action="signup" class="needs-validation" method="POST" novalidate="">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label class="form-label" >First name</label>
+                            <input class="form-control" name="first_name" placeholder="" required="" type="text" value="">
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label class="form-label">Last name</label>
+                            <input class="form-control" name="last_name" placeholder="" required="" type="text" value="">
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                               <label>User Name</label> <input class="form-control" name="username" placeholder="username" required=""
+                                       type="text">
+                                <div class="invalid-feedback">
+                                    Your username is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label" >Email <span
+                                    class="text-muted">(Optional)</span></label>
+                            <input class="form-control" name="email_id" placeholder="you@example.com" type="email">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Password</label>
+                            <input class="form-control" name="password" required="" type="password">
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <label class="form-label" for="country">Country</label>
+                            <select class="form-select" id="country" required="">
+                                <option value="">Choose...</option>
+                                <option>United States</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid country.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label" for="state">State</label>
+                            <select class="form-select" id="state" required="">
+                                <option value="">Choose...</option>
+                                <option>California</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label" for="zip">Zip</label>
+                            <input class="form-control" id="zip" placeholder="" required="" type="text">
+                            <div class="invalid-feedback">
+                                Zip code required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2022–2024 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+    <div></div>
+</div>
+
+
+<!--<form action="signup" method="POST">-->
+<!--    {% csrf_token %}-->
+<!--    User Name:<input type="text" name="username"><br>-->
+<!--    First Name:<input type="text" name="first_name"><br>-->
+<!--    Last Name:<input type="text" name="last_name"><br>-->
+<!--    Email-id:<input type="email" name="email_id"><br>-->
+<!--    Password:<input type="password" name="password"><br>-->
+<!--    <input type="submit">-->
+
+
+<!--</form>-->
+
+</body>
+</html>
